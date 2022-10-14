@@ -18,10 +18,11 @@ img {
 header {
   font-size: 1.3rem;
 }
-header > .seperator {
+header .seperator {
   width: 1px;
   height: 1.5em;
   background-color: #666;
+  opacity: 45%;
 }
 header > .header-top {
   background-color: black;
@@ -29,7 +30,7 @@ header > .header-top {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 0.75em 6em;
+  padding: 0.75em 16.5rem;
   gap: 2em;
 }
 @media screen and (max-width: 960px) {
@@ -37,8 +38,18 @@ header > .header-top {
     display: none;
   }
 }
+header > .header-top .date-time {
+  display: flex;
+  gap: 0.3em;
+  align-items: center;
+}
 header > .header-top > .temperature {
   margin-right: auto;
+}
+header > .header-top .login-register {
+  display: flex;
+  gap: 0.9em;
+  align-items: center;
 }
 header > .header-top > .social {
   display: flex;
@@ -50,11 +61,10 @@ header > .bottom-header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  gap: 1em;
-  padding: 0.75em 6em;
+  gap: 1.5em;
+  padding: 1.25em 16.5rem;
   align-items: center;
   font-size: 1.4rem;
-  box-shadow: 1px 7px 7px -7px rgba(0, 0, 0, 0.2);
 }
 @media screen and (max-width: 960px) {
   header > .bottom-header > .logo {
@@ -62,10 +72,8 @@ header > .bottom-header {
   }
 }
 header > .bottom-header > .logo > img {
-  height: 3rem;
-  width: 10rem;
-  -o-object-fit: contain;
-     object-fit: contain;
+  height: 4rem;
+  width: 12rem;
 }
 header > .bottom-header > nav {
   text-transform: uppercase;
@@ -88,19 +96,29 @@ header > .bottom-header > nav > ul > li > a {
   color: inherit;
   text-decoration: none;
   align-items: center;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: black;
 }
 header > .bottom-header > nav > ul > li > a > i {
   font-size: 1rem;
   opacity: 0.3;
 }
-header > .bottom-header > i {
+header > .bottom-header > .seperator {
+  height: 2em;
+  opacity: 25%;
+}
+header > .bottom-header > .search > i {
   font-size: 2rem;
+}
+header > .bottom-header > .bars > i {
+  font-size: 3rem;
 }
 
 main > header {
   background-color: #f4f7f8;
   text-align: center;
-  font-weight: bolder;
+  font-weight: 700;
   font-size: 3.4rem;
   padding: 1em;
   text-transform: uppercase;
@@ -108,7 +126,7 @@ main > header {
 main > .wrapper {
   display: flex;
   margin: auto;
-  padding: 8rem 20rem;
+  padding: 4.75rem 18rem;
   gap: 8em;
 }
 @media screen and (max-width: 900px) {
@@ -127,7 +145,7 @@ main > .wrapper > section {
 main > .wrapper > section > article {
   background-color: #f4f7f8;
   display: flex;
-  padding: 4.5rem 2rem;
+  padding: 4.5rem 4rem;
   width: 100%;
   align-items: center;
 }
@@ -138,6 +156,7 @@ main > .wrapper > section > article {
 }
 main > .wrapper > section > article > img {
   width: 40rem;
+  height: 29rem;
   z-index: 1;
 }
 @media screen and (max-width: 1300px) {
@@ -175,16 +194,18 @@ main > .wrapper > section > article > .details > .date {
   display: flex;
   align-items: center;
   gap: 0.5em;
-  font-size: 1rem;
+  font-size: 1.2rem;
   opacity: 0.4;
 }
 main > .wrapper > section > article > .details > .title {
-  font-weight: 500;
-  font-size: 1.8rem;
+  line-height: 2.5rem;
+  font-weight: 410;
+  font-size: 2.3rem;
 }
 main > .wrapper > section > article > .details > .description {
+  line-height: 2.5rem;
   opacity: 0.6;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
 }
 main > .wrapper > section > article > .details > .author {
   display: flex;
@@ -204,7 +225,8 @@ main > .wrapper > aside {
   display: flex;
   gap: 4.5rem;
   flex-direction: column;
-  min-width: 243.66px;
+  min-width: 245px;
+  width: 45%;
 }
 @media screen and (max-width: 900px) {
   main > .wrapper > aside {
